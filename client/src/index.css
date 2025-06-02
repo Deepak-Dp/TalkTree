@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 
+body{
+    @apply bg-black
+} */
+
+.scrollbar::-webkit-scrollbar{
+    
+ width: 5px;
+}
+
+.scrollbar::-webkit-scrollbar-track{
+    
+    background: #f1f1f3;
+ }
+ .scrollbar::-webkit-scrollbar-thumb{
+    
+    background: #60a5fa;
+ }
