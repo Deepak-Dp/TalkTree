@@ -39,7 +39,7 @@ function CreatePost() {
         text: text
       }
       setWaitPost(true)
-    const response = await axios.post("http://localhost:5000/api/v1/post/create-post",data,{
+    const response = await axios.post(`${import.meta.env.VITE_API}/api/v1/post/create-post`,data,{
       withCredentials:true
     })
     

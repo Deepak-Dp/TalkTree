@@ -39,7 +39,7 @@ function Register() {
     e.preventDefault();
   setWait(true)
     const response = await axios.post(
-      "http://localhost:5000/api/v1/user/register",
+      `${import.meta.env.VITE_API}/api/v1/user/register`,
       data,
       {
         withCredentials: true,

@@ -35,7 +35,7 @@ function Profile() {
   const getUserProfile = async () => {
     setWait(true);
     const response = await axios.get(
-      `http://localhost:5000/api/v1/user/otherUser/${id}`,
+      `${import.meta.env.VITE_API}/api/v1/user/otherUser/${id}`,
       {
         withCredentials: true,
       }

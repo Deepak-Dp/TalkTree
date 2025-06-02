@@ -13,7 +13,7 @@ const initialState= {
 export const getAllPost = createAsyncThunk(
     'post/allPost',
     async()=>{
-        const response = await axios.get('http://localhost:5000/api/v1/post/all-posts', {
+        const response = await axios.get(`${import.meta.env.VITE_API}/api/v1/post/all-posts`, {
             withCredentials: true
         })
         
@@ -24,7 +24,7 @@ export const getAllPost = createAsyncThunk(
 export const getAllFollowingsPost = createAsyncThunk(
     'post/allFollowingsPost',
     async()=>{
-        const response = await axios.get('http://localhost:5000/api/v1/post/following-posts', {
+        const response = await axios.get(`${import.meta.env.VITE_API}/api/v1/post/following-posts`, {
             withCredentials: true
         })
         
