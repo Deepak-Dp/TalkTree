@@ -24,7 +24,7 @@ function RightSideBar() {
   const searchUserHandler = async() => {
     
      const response = await axios.get(
-      `${import.meta.env.VITE_API}/api/v1/user/getAllUser`,
+      `http://localhost:5000/api/v1/user/getAllUser`,
       {
         withCredentials: true,
       }

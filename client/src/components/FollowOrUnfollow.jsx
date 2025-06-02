@@ -16,7 +16,7 @@ function FollowOrUnfollow(userdata) {
     
     const handleFollow = async () => {
         const response = await axios.post(
-            `${import.meta.env.VITE_API}/api/v1/user/follow`,{
+            'http://localhost:5000/api/v1/user/follow',{
                 "followId": userdata?.userdata?._id,
             }
             ,{

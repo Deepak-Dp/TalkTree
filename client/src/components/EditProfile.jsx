@@ -82,7 +82,7 @@ function EditProfile({data,openEditProfileHandler,getUserProfile}) {
 
     const submitDataHandler = async (e) => {
         e.preventDefault();
-        const response = await axios.put(`${import.meta.env.VITE_API}/api/v1/user/updateUser`, updatedData, {
+        const response = await axios.put("http://localhost:5000/api/v1/user/updateUser", updatedData, {
             withCredentials: true,
         });
        

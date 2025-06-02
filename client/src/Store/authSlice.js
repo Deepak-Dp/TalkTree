@@ -13,7 +13,7 @@ const initialState = {
 
 export const getUserData = createAsyncThunk("/user/getUserData", async () => {
   const response = await axios.get(
-    `${import.meta.env.VITE_API}/api/v1/user/Profile`,
+    "http://localhost:5000/api/v1/user/Profile",
     {
       withCredentials: true,
     }
@@ -23,7 +23,7 @@ export const getUserData = createAsyncThunk("/user/getUserData", async () => {
 });
 
 export const logOutUser = createAsyncThunk("/user/logout", async () => {
-  const response = await axios.get(`${import.meta.env.VITE_API}/api/v1/user/logout`, {
+  const response = await axios.get("http://localhost:5000/api/v1/user/logout", {
     withCredentials: true,
   });
 
@@ -33,7 +33,7 @@ export const logOutUser = createAsyncThunk("/user/logout", async () => {
 export const getAllUsers = createAsyncThunk(
   "/user/getAllUsers",
   async ()=> {
-    const response = await axios.get(`${import.meta.env.VITE_API}/api/v1/user/suggested-users`,
+    const response = await axios.get("http://localhost:5000/api/v1/user/suggested-users",
       {
         withCredentials: true,
       }

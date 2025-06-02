@@ -39,7 +39,7 @@ function PostSketelon(data) {
 
   const likeOrDisLikeHandler = async () => {
     const response = await axios.post(
-      `${import.meta.env.VITE_API}/api/v1/post/like-post/${data.data._id}`,
+      `http://localhost:5000/api/v1/post/like-post/${data.data._id}`,
       { userId: user._id }
     );
 
@@ -52,7 +52,7 @@ function PostSketelon(data) {
   const deletePostHandler = async () => { 
        console.log("delete post handler", data.data._id);
     const response = await axios.delete(
-      `${import.meta.env.VITE_API}/api/v1/post/delete-post/${data.data._id}`,
+      `http://localhost:5000/api/v1/post/delete-post/${data.data._id}`,
       {
         withCredentials: true,
       }
@@ -79,7 +79,7 @@ function PostSketelon(data) {
     }
 
     const response = await axios.post(
-      `${import.meta.env.VITE_API}/api/v1/post/comment/${data.data._id}`,
+      `http://localhost:5000/api/v1/post/comment/${data.data._id}`,
       { text: commentText },
       {
         withCredentials: true,

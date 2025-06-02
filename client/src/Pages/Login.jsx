@@ -33,7 +33,7 @@ function Login() {
   const onSubmitHandler = async (e) => {
     e.preventDefault();
     setWait(true);
-    const response = await axios.post(`${import.meta.env.VITE_API}/api/v1/user/login`, data,{
+    const response = await axios.post("http://localhost:5000/api/v1/user/login", data,{
       withCredentials: true
     })
 
